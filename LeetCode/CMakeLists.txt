@@ -3,4 +3,4 @@ project(LeetCode)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(LeetCode )
+add_executable(LeetCode 214_Shortest_Palindrome.cpp)

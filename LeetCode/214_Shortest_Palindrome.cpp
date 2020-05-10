@@ -10,28 +10,22 @@ using namespace std;
 
 class Solution {
 public:
-    string shortestPalindrome(string s) {
-        string reverse_str = s;
-        reverse(reverse_str.begin(), reverse_str.end());
-
-        string new_string = s + '#' + reverse_str;
-
-        vector<int> KMP(new_string.length(), 0);
-
-        for (int i = 1; i < new_string.length(); i++) {
-            int j = KMP[i - 1];
-            while (j > 0 && new_string[i] != new_string[j])
-                j = KMP[j - 1];
-            if (new_string[i] == new_string[j])
-                ++j;
-            KMP[i] = j;
+    string shortestPalindrome(string s){
+        int i = 0;
+        for (int j = s.size() - 1; j >= 0; j--) {
+            if (s[i] == s[j])
+                i++;
         }
-        return reverse_str.substr(0, s.size() - KMP[new_string.length() - 1]) + s;
+        if (i == s.size())
+            return s;
+        string remain_rev = s.substr(i, s.size());
+        reverse(remain_rev.begin(), remain_rev.end());
+        return remain_rev + shortestPalindrome(s.substr(0, i)) + s.substr(i);
     }
 };
 
 int main() {
-    string s = "abc";
+    string s = "abbc";
     cout << Solution().shortestPalindrome(s);
     return 0;
 }
