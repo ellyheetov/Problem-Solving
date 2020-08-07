@@ -10,18 +10,17 @@ public class Leetcode20_Valid_Parentheses {
 
         for (char c : charArray) {
 
-            if (c == '(' || c == '{' ||c == '[') {
+            if (c == '(' || c == '{' || c == '[') {
                 parenthese.push(c);
                 continue;
             }
-            if(parenthese.empty()) return false;
-            if (parenthese.peek() == '{' && c == '}')
-                parenthese.pop();
-            else if (parenthese.peek() == '(' && c == ')')
-                parenthese.pop();
-            else if (parenthese.peek() == '[' && c == ']')
-                parenthese.pop();
-            else return false;
+            if (parenthese.empty()) return false;
+
+            char innder = parenthese.peek();
+            parenthese.pop();
+
+            if (!(innder == '{' && c == '}' || innder == '(' && c == ')' || innder == '[' && c == ']'))
+                return false;
         }
         return parenthese.empty();
     }
