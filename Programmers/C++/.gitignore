@@ -68,7 +68,7 @@ Temporary Items
 
 # CMake
 cmake-build-*/
-CMakeLists.txt
+/CMakeLists.txt
 
 # Mongo Explorer plugin
 .idea/**/mongoSettings.xml
@@ -141,4 +141,5 @@ gen
 *.exe
 *.out
 *.app
+
 
