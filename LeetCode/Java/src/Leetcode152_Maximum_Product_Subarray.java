@@ -1,4 +1,14 @@
 public class Leetcode152_Maximum_Product_Subarray {
+
+    /*
+    Time Complexity : O(N)
+    Space Complexity : O(1)
+
+    음수도 고려해야 하므로 최솟값과 최댓값을 같이 저장해야 한다.
+    현재까지의 최댓값, 최솟값을 저장하기 위한 변수 : curMax, curMin
+    다음 숫자와의 연산 후 최댓값 최솟값을 저장하기 위한 변수 : nextMax, nextMin
+    */
+
     public static int maxProduct(int[] nums) {
         int max = nums[0];
         int currentMax = nums[0];
