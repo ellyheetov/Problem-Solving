@@ -1,7 +1,7 @@
 # Programmers Lv2 JadenCase 문자열 만들기
 
-- 날짜: 2021/04/02
-
+- 날짜: 2021/05/09
+- 문제 유형: String
 ## 문제
 [문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12951)
 
