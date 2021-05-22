@@ -1,4 +1,4 @@
-# Programmers Lv2 가장 먼 노드
+# Programmers Lv3 가장 먼 노드
 
 - 날짜: 2021/05/22
 - 문제 유형 : 그래프
